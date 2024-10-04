@@ -29,4 +29,12 @@ const removeArticleDelete = asyncHandler(async (req, res) => {
     res.json({ deleted: id });
 })
 
-export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut, removeArticleDelete };
+const articleCommentsGet = asyncHandler(async (req, res) => {
+    console.log("Do stuff get article comments");
+    const { articleId } = req.params;
+    const comments = [];
+    
+    res.json(comments);
+})
+
+export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut, removeArticleDelete, articleCommentsGet };
