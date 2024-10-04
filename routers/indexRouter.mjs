@@ -14,6 +14,9 @@ indexRouter.put("/articles/:id", indexController.updateArticlePut);
 indexRouter.delete("/articles/:id", indexController.removeArticleDelete)
 
 indexRouter.get("/articles/:articleId/comments", indexController.articleCommentsGet)
+
 indexRouter.post("/users", indexController.createUserPost);
+
+indexRouter.get("/employees", indexController.employeesSearchGet);
 
 export default indexRouter;
