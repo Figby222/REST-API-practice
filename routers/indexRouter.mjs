@@ -7,4 +7,6 @@ indexRouter.get("/", indexController.indexRouteGet);
 
 indexRouter.get("/articles", indexController.articlesListGet);
 
+indexRouter.post("/articles", indexController.createArticlePost)
+
 export default indexRouter;
