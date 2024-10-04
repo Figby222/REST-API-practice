@@ -19,4 +19,6 @@ indexRouter.post("/users", indexController.createUserPost);
 
 indexRouter.get("/employees", indexController.employeesSearchGet);
 
+indexRouter.get("/v2/employees", indexController.employeesListGet);
+
 export default indexRouter;
