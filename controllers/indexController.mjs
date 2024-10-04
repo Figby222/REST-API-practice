@@ -16,4 +16,11 @@ const createArticlePost = asyncHandler(async (req, res) => {
     res.json(req.body);
 })
 
-export { indexRouteGet, articlesListGet, createArticlePost };
+const updateArticlePut = asyncHandler(async (req, res) => {
+    console.log("Do stuff to update article");
+    const { id } = req.params;
+
+    res.json(req.body);
+})
+
+export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut };
