@@ -73,4 +73,12 @@ const employeesSearchGet = asyncHandler(async (req, res) => {
     res.json(results);
 })
 
-export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut, removeArticleDelete, articleCommentsGet, createUserPost, employeesSearchGet };
+const employeesListGet = asyncHandler(async (req, res) => {
+    console.log("Do stuff to get employees");
+    const employees = [];
+    res.json(employees);
+})
+
+
+
+export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut, removeArticleDelete, articleCommentsGet, createUserPost, employeesSearchGet, employeesListGet };
