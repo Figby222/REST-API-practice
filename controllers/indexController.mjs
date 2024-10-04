@@ -50,4 +50,27 @@ const createUserPost = asyncHandler(async (req, res) => {
     res.json(req.body);
 })
 
-export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut, removeArticleDelete, articleCommentsGet, createUserPost };
+const employees = [
+    { firstName: "John", lastName: "Doe", age: 20 },
+    { lastName: "Jane", lastName: "Doe", age: 30 },
+    { firstName: "Mary", lastName: "HadALittleLamb", age: 2349877493287327 }
+];
+
+const employeesSearchGet = asyncHandler(async (req, res) => {
+    const { firstName, lastName, age } = req.query;
+    let results = [ ...employees ];
+    if (firstName) {
+        results = results.filter(result => result.firstName === firstName);
+    }
+
+    if (lastName) {
+        results = results.filter(result => result.lastName === lastName);
+    }
+
+    if (age) {
+        results = results.filter(result => +result.age === +age);
+    }
+    res.json(results);
+})
+
+export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut, removeArticleDelete, articleCommentsGet, createUserPost, employeesSearchGet };
