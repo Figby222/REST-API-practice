@@ -11,4 +11,9 @@ const articlesListGet = asyncHandler(async (req, res) => {
     res.json(articles);
 })
 
-export { indexRouteGet, articlesListGet };
+const createArticlePost = asyncHandler(async (req, res) => {
+    console.log("Do stuff to create article");
+    res.json(req.body);
+})
+
+export { indexRouteGet, articlesListGet, createArticlePost };
