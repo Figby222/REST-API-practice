@@ -3,7 +3,6 @@ import asyncHandler from "express-async-handler";
 function indexRouteGet(req, res) {
     res.render("index", { title: "Node Template" });
 }
-
 const articlesListGet = asyncHandler(async (req, res) => {
     console.log("Do stuff to get articles");
     const articles = [];
@@ -23,4 +22,11 @@ const updateArticlePut = asyncHandler(async (req, res) => {
     res.json(req.body);
 })
 
-export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut };
+const removeArticleDelete = asyncHandler(async (req, res) => {
+    console.log("Do stuff to delete article");
+    const { id } = req.params;
+
+    res.json({ deleted: id });
+})
+
+export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut, removeArticleDelete };
