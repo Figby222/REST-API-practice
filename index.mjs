@@ -5,12 +5,15 @@ import "dotenv/config";
 import path from "node:path";
 import session from "./config/expressSession.mjs";
 import passport from "./config/passport.mjs";
+import apicache from "apicache"
+const cache = apicache.middleware;
 
 const __dirname = import.meta.dirname;
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+app.use(cache("5 minutes"));
 app.use(session);
 app.use(passport.session());
 
