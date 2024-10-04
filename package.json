@@ -1,21 +1,21 @@
 {
-  "name": "node-template",
+  "name": "rest-api-practice",
   "version": "1.0.0",
-  "description": "A Node.js template repository",
+  "description": "A Node.js repository used to practice REST API's",
   "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Figby222/node-template.git"
+    "url": "git+https://github.com/Figby222/REST-API-practice.git"
   },
   "author": "Figby222",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Figby222/node-template/issues"
+    "url": "https://github.com/Figby222/REST-API-practice/issues"
   },
-  "homepage": "https://github.com/Figby222/node-template#readme",
+  "homepage": "https://github.com/Figby222/REST-API-practice#readme",
   "dependencies": {
     "@prisma/client": "^5.20.0",
     "@quixo3/prisma-session-store": "^3.1.13",
