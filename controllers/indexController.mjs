@@ -37,4 +37,17 @@ const articleCommentsGet = asyncHandler(async (req, res) => {
     res.json(comments);
 })
 
-export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut, removeArticleDelete, articleCommentsGet };
+const users = [
+    { name: "superCoolUser", email: "superCoolUser@user.com" }
+];
+
+const createUserPost = asyncHandler(async (req, res) => {
+    const { email } = req.body;
+    const userExists = users.find(user => user.email === email);
+    if (userExists) {
+        return res.status(400).json({ error: "User already exists" });
+    }
+    res.json(req.body);
+})
+
+export { indexRouteGet, articlesListGet, createArticlePost, updateArticlePut, removeArticleDelete, articleCommentsGet, createUserPost };
